@@ -1,0 +1,31 @@
+@import 'config.scss';
+@import 'circle.scss';
+
+html, body {
+    background-color: $primary-color;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px; 
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#page-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+/*
+    IMPORTANT CONFIGURATION TO THIS PROJECT WITH THE COMPLEMENT SASS LIVE SREVER COMPILER
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/css/"
+        }
+    ]
+
+*/
