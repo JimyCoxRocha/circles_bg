@@ -34,9 +34,9 @@ const searchNewPosition = (randomHeight, randomWidth) => {
                     const BHeight = randomHeight;
                     
                     if (
-                        (AWidth > (BWidth + window.innerHeight * 0.15) || AWidth < (BWidth + window.innerHeight))
+                        (AWidth > (BWidth + window.innerHeight * 0.25) || AWidth < (BWidth + window.innerHeight))
                         &&
-                        (AHeight > (BHeight + window.innerHeight * 0.15) || AHeight < (BHeight + window.innerHeight))
+                        (AHeight > (BHeight + window.innerHeight * 0.25) || AHeight < (BHeight + window.innerHeight))
                     ){
                         continue;
                     }
@@ -53,8 +53,12 @@ const searchNewPosition = (randomHeight, randomWidth) => {
 
 
 const availablePosition = () => {
-    const heigth = window.innerHeight - (window.innerWidth * 0.25);
-    const width = window.innerWidth - (window.innerWidth * 0.25);
+ //   Math.random() * (max - min) + min;
+    const heigthMax = (window.innerHeight - (window.innerHeight * 0.20));
+    const widthMax = (window.innerWidth - (window.innerWidth * 0.20));
+    const heigthMin = (window.innerHeight * 0.02);
+    const widthMin = (window.innerWidth * 0.02);
+    console.log(innerWidth, (window.innerWidth * 0.05))
     let counter = 0;
     let randomHeight = 0;
     let randomWidth = 0;
@@ -63,8 +67,8 @@ const availablePosition = () => {
             console.log("break;");
             break;
         }
-        randomHeight = Math.floor(Math.random() * heigth);
-        randomWidth = Math.floor(Math.random() * width);
+        randomHeight = Math.floor(Math.random() * (heigthMax - heigthMin));
+        randomWidth = Math.floor(Math.random() * (widthMax - widthMin));
         counter += 1;
         
     } while (searchNewPosition(randomHeight, randomWidth));
