@@ -54,7 +54,7 @@ const searchNewPosition = (randomHeight, randomWidth) => {
 
 const availablePosition = () => {
  //   Math.random() * (max - min) + min;
-    const heigthMax = (window.innerHeight - (window.innerHeight * 0.20));
+    const heigthMax = (window.innerHeight - (window.innerHeight * 0.30));
     const widthMax = (window.innerWidth - (window.innerWidth * 0.20));
     const heigthMin = (window.innerHeight * 0.02);
     const widthMin = (window.innerWidth * 0.02);
